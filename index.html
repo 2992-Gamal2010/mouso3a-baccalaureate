@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>موسوعة البكالوريا التفاعلية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loginScreen" class="login-screen">
+  <div class="login-art">
+    <div class="orb orb-a"></div><div class="orb orb-b"></div>
+    <div class="brand-mark">م</div>
+    <div class="art-copy">
+      <span class="eyebrow">منصة تعليمية تفاعلية</span>
+      <h1>موسوعة<br><strong>البكالوريا</strong><br>التفاعلية</h1>
+      <p>محتوى دراسي رسمي، مسارات واضحة، تعلم تفاعلي، وتقدمك في مكان واحد.</p>
+      <div class="trust-row"><span>● محتوى مرتبط بمصادر الوزارة</span><span>● تعمل محليًا</span></div>
+    </div>
+  </div>
+  <div class="login-panel">
+    <div class="login-head"><span class="mini-logo">م</span><div><b>تسجيل الدخول</b><small>اختر نوع الحساب ثم أدخل بياناتك</small></div></div>
+    <div class="role-tabs"><button class="role-tab active" data-role="student">طالب</button><button class="role-tab" data-role="admin">إدارة</button></div>
+    <form id="loginForm">
+      <label>اسم المستخدم أو البريد</label><input id="loginUsername" required autocomplete="username" placeholder="أدخل اسم المستخدم">
+      <label>كلمة المرور</label><input id="loginPassword" required type="password" autocomplete="current-password" placeholder="أدخل كلمة المرور">
+      <button class="primary big" type="submit">دخول <span>←</span></button>
+      <div id="loginMessage" class="login-message"></div>
+    </form>
+    <div class="login-foot"><span>🔒 بيانات الدخول لا تُعرض على شاشة الدخول</span><a href="#" id="openGuide">دليل الاستخدام</a></div>
+  </div>
+</div>
+
+<div id="app" class="app hidden">
+  <aside class="sidebar">
+    <div class="side-brand"><span class="mini-logo">م</span><div><b>موسوعة البكالوريا</b><small>Interactive Academy</small></div></div>
+    <div id="profileCard" class="profile-card"></div>
+    <nav id="navStudent" class="nav"></nav>
+    <nav id="navAdmin" class="nav hidden"></nav>
+    <div class="side-bottom"><button id="themeBtn" class="ghost-btn">◐ المظهر</button><button id="logoutBtn" class="danger-btn">↪ تسجيل الخروج</button></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button id="mobileMenu" class="icon-btn">☰</button><div><span id="crumb" class="crumb">الرئيسية</span><h2 id="pageTitle">لوحة التعلم</h2></div><div class="top-actions"><button id="sourceBtn" class="source-btn">المكتبة الرسمية ↗</button><div class="avatar" id="avatar">م</div></div></header>
+    <section id="content" class="content"></section>
+  </main>
+</div>
+
+<div id="modal" class="modal hidden"><div class="modal-card"><button id="modalClose" class="modal-close">×</button><div id="modalContent"></div></div></div>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
